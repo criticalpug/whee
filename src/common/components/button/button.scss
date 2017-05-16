@@ -1,0 +1,16 @@
+@import '../../../../styles/colors';
+
+$whee-button-border-width: 1px;
+
+.whee-button {
+    border: $whee-button-border-width solid $whee-color-black;
+    color: $whee-color-black;
+    background-color: $whee-color-white;
+    outline: none;
+
+    &:hover, &:focus {
+        color: $whee-color-white;
+        background-color: $whee-color-black;
+        cursor: pointer;
+    }
+}

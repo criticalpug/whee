@@ -1,0 +1,29 @@
+@import '../../../../styles/colors';
+
+.whee-shape {
+	flex: none;
+}
+
+.whee-shape-rectangle {
+	@extend .whee-shape;
+  background-color: $whee-color-pink;
+  width: 100px;
+	height: 100px;
+}
+
+.whee-shape-circle {
+	@extend .whee-shape;
+  background-color: $whee-color-pink;
+  width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+
+.whee-shape-triangle {
+	@extend .whee-shape;
+  width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid $whee-color-pink;
+}

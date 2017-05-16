@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "First Circle",
+    "type": "Circle",
+    "description": "Perfect choice when you don’t need any corners.",
+    "price": 999,
+    "currency": "€"
+  },
+  {
+    "id": 2,
+    "name": "First Rectangle",
+    "type": "Rectangle",
+    "description": "For once, it’s a great idea to think inside the box.",
+    "price": 899,
+    "currency": "€"
+  },
+  {
+    "id": 3,
+    "name": "First Triangle",
+    "type": "Triangle",
+    "description": "A true classic with three elegant corners.",
+    "price": 1009,
+    "currency": "€"
+  },
+  {
+    "id": 4,
+    "name": "Second Circle",
+    "type": "Circle",
+    "description": "Perfect choice when you don’t need any corners.",
+    "price": 999,
+    "currency": "€"
+  },
+  {
+    "id": 5,
+    "name": "Second Rectangle",
+    "type": "Rectangle",
+    "description": "For once, it’s a great idea to think inside the box.",
+    "price": 369,
+    "currency": "€"
+  },
+  {
+    "id": 6,
+    "name": "Second Triangle",
+    "type": "Triangle",
+    "description": "A true classic with three elegant corners.",
+    "price": 249,
+    "currency": "€"
+  },
+  {
+    "id": 7,
+    "name": "Third Circle",
+    "type": "Circle",
+    "description": "Perfect choice when you don’t need any corners.",
+    "price": 139,
+    "currency": "€"
+  },
+  {
+    "id": 8,
+    "name": "Third Rectangle",
+    "type": "Rectangle",
+    "description": "For once, it’s a great idea to think inside the box.",
+    "price": 129,
+    "currency": "€"
+  },
+  {
+    "id": 9,
+    "name": "Third Triangle",
+    "type": "Triangle",
+    "description": "A true classic with three elegant corners.",
+    "price": 521,
+    "currency": "€"
+  },
+  {
+    "id": 10,
+    "name": "Fourth Circle",
+    "type": "Circle",
+    "description": "Perfect choice when you don’t need any corners.",
+    "price": 134,
+    "currency": "€"
+  },
+  {
+    "id": 11,
+    "name": "Fourth Rectangle",
+    "type": "Rectangle",
+    "description": "For once, it’s a great idea to think inside the box.",
+    "price": 423,
+    "currency": "€"
+  },
+  {
+    "id": 12,
+    "name": "Fourth Triangle",
+    "type": "Triangle",
+    "description": "A true classic with three elegant corners.",
+    "price": 786,
+    "currency": "€"
+  }
+]

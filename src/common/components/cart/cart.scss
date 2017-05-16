@@ -1,0 +1,84 @@
+@import '../../../../styles/colors';
+
+@mixin shape-circle($radius, $color) {
+  width: ($radius * 2);
+	height: ($radius * 2);
+	background: $color;
+	border-radius: $radius;
+}
+
+.whee-shape-circle {
+  @include shape-circle(20px, $whee-color-black);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .whee-icon-cart {
+    fill: $whee-color-gray;
+  }
+}
+
+.whee-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__title {
+    margin-right: 1rem;
+  }
+
+  &__button {
+    @include shape-circle(20px, $whee-color-black);
+
+    /* Fix for Safari flexbox with button */
+    & > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    border-style: none;
+
+    &:focus {
+      border-style: none;
+      outline: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .whee-icon-cart {
+      fill: $whee-color-white;
+    }
+  }
+}
+
+.whee-cart-contents {
+  width: 300px;
+  border-left: 1px solid $whee-color-black;
+  background-color: $whee-color-white;
+  height: 100vh;
+  overflow-y: auto;
+
+  &__item {
+    margin: 0.7rem;
+  }
+
+  &__empty {
+    text-align: center;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+     margin: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+ .whee-cart-contents {
+    width: 100vw;
+  }
+}

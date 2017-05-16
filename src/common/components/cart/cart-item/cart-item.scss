@@ -1,0 +1,34 @@
+@import '../../../../../styles/colors';
+
+$whee-cart-margin: 0.7rem;
+$whee-cart-padding: 0.7rem;
+
+.whee-cart-summary {
+  margin: $whee-cart-margin;
+}
+
+.whee-cart-item {
+  font-size: 1rem;
+
+  margin: $whee-cart-margin;
+  padding: $whee-cart-padding;
+
+  border: 1px solid $whee-color-black;
+
+  &__name {
+        font-size: 1.2em;
+  }
+
+  &__description {
+      font-size: 0.8em;
+  }
+
+  &__price {
+      font-size: 1em;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+  }
+}

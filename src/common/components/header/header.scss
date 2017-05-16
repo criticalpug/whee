@@ -1,0 +1,46 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/colors';
+
+$whee-header-sawtooth-size: 32px;
+
+.whee-header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.2rem 1.5rem 0.2rem 1.5rem;
+    background-color: $whee-color-gradient-start;
+    background: linear-gradient($whee-color-gradient-end, $whee-color-gradient-start);
+
+    &__title {
+        font-size: 4rem;
+        margin-right: 2rem;
+        font-family: Pacifico;
+    }
+    &__filler {
+        flex: 1;
+    }
+
+    &__description {
+        @media (max-width: 800px) {
+            display: none;
+        }
+    }
+}
+
+.whee-header {
+    background-color: $whee-color-gradient-start;
+}
+
+.whee-header:after {
+    background: linear-gradient(-45deg, #ffffff 16px, transparent 0), linear-gradient(45deg, #ffffff 16px, transparent 0);
+    background-position: left-bottom;
+    background-repeat: repeat-x;
+    background-size: $whee-header-sawtooth-size $whee-header-sawtooth-size;
+    content: " ";
+    display: block;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: $whee-header-sawtooth-size;
+}
