@@ -61,6 +61,7 @@
   background-color: $whee-color-white;
   height: 100vh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   &__item {
     margin: 0.7rem;

@@ -79,6 +79,7 @@
   },
   "dependencies": {
     "axios": "^0.15.0",
+    "babel-polyfill": "^6.23.0",
     "immutable": "^3.8.1",
     "react-immutable-proptypes": "^2.1.0",
     "react-redux": "^5.0.4",

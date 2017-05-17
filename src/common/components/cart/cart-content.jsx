@@ -26,7 +26,7 @@ class CartContents extends React.Component {
           const item = groupItem.get(0);
           const count = groupItem.size;
           total += (item.get('price') * count);
-          return <CartItem item={item} onClick={this.removeFromCart} count={count} />;
+          return <CartItem item={item} key={item.get('id')} onClick={this.removeFromCart} count={count} />;
         });
 
     const count = this.props.items.size === 1
