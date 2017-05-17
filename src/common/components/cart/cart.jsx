@@ -15,7 +15,7 @@ const cartIcon = (
   </svg>
 );
 
-class Cart extends React.Component {
+class Cart extends React.PureComponent {
   getText = (count, texts) => {
     let text = '';
 

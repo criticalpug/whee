@@ -55,6 +55,14 @@
   }
 }
 
+@media (max-width: 767px) {
+  .whee-cart {
+    &__title {
+      font-size: 0.8rem;
+    }
+  }
+}
+
 .whee-cart-contents {
   width: 300px;
   border-left: 1px solid $whee-color-black;

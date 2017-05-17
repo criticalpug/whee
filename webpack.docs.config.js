@@ -8,12 +8,15 @@ const flexbugs = require('postcss-flexbugs-fixes');
 const merge = require('webpack-merge');
 const getBaseConfiguration = require('./webpack/base.config.js');
 
+const extractCSS = new ExtractTextPlugin('styles/[name]-css.[contenthash].css');
+
 const params = {
   root: __dirname,
   buildPath: 'docs',
   output: {
     path: path.join(__dirname, '/docs'),
-    filename: 'js/docs.js',
+    filename: 'js/docs.[chunkhash].js',
+    chunkFilename: 'js/[name].[chunkhash].js',
   },
   entry: {
     app: path.join(__dirname, '/src/index.jsx'),
@@ -27,7 +30,7 @@ const plugins = [
   }),
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
-    filename: 'js/vendor.bundle.js',
+    filename: 'js/vendor.bundle.[chunkhash].js',
   }),
   new HtmlWebpackPlugin({
     filename: 'index.html',
@@ -67,17 +70,19 @@ const rules = [
   },
   {
     test: /\.scss$/,
-    use: [
-      'style-loader',
-      'css-loader',
-      {
-        loader: 'postcss-loader',
-        options: {
-          plugins: () => [flexbugs, precss, autoprefixer],
+    use: ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      use: [
+        'css-loader',
+        {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => [flexbugs, precss, autoprefixer],
+          },
         },
-      },
-      'sass-loader',
-    ],
+        'sass-loader',
+      ],
+    }),
   },
   {
     test: /\.ico$/,
@@ -88,16 +93,18 @@ const rules = [
   },
   {
     test: /\.css$/,
-    use: [
-      'style-loader',
-      'css-loader',
-      {
-        loader: 'postcss-loader',
-        options: {
-          plugins: () => [flexbugs, precss, autoprefixer],
+    use: extractCSS.extract({
+      fallback: 'style-loader',
+      use: [
+        'css-loader',
+        {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => [flexbugs, precss, autoprefixer],
+          },
         },
-      },
-    ],
+      ],
+    }),
   },
 ];
 

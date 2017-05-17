@@ -27,6 +27,15 @@ $whee-header-sawtooth-size: 32px;
     }
 }
 
+
+@media (max-width: 767px) {
+  .whee-header-content {
+    &__title {
+        font-size: 2rem;
+    }
+  }
+}
+
 .whee-header {
     background-color: $whee-color-gradient-start;
 }

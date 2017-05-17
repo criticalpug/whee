@@ -11,7 +11,7 @@ const removeButtonStyle = {
   marginTop: '0.5rem',
 };
 
-class CartItem extends React.Component {
+class CartItem extends React.PureComponent {
   onClick = () => {
     if (this.props.onClick) {
       this.props.onClick(this.props.item);

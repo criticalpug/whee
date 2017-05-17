@@ -8,7 +8,7 @@ import Item from '../common/components/item/item';
 
 import './shapes.scss';
 
-class Shapes extends React.Component {
+class Shapes extends React.PureComponent {
   componentDidMount = () => {
     this.props.loadShapes();
   }
@@ -19,7 +19,7 @@ class Shapes extends React.Component {
 
   render() {
     return (
-      <div className="shop-shapes">
+      <div className="whee-shapes">
         {
           this.props.shapes.map(shape =>
             <Item key={shape.get('id')} item={shape} onClick={this.onClick} />,

@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 
-.shop-shapes {
+.whee-shapes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,13 +9,8 @@
     -webkit-overflow-scrolling: touch;
 }
 
-.shop-item {
-    // margin: 1rem;
-    // width: calc(33%);
-}
-
-@media (max-width: 600px) {
-  .shop-item {
-    width: calc(100%);
+@media (max-width: 767px) {
+  .whee-shapes {
+      align-items: stretch;
   }
 }

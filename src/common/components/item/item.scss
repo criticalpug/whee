@@ -6,7 +6,6 @@ $whee-item-border-color: $whee-color-black;
 .whee-item {
     display: flex;
     flex-direction: row;
-    // border: 1px solid $whee-item-border-color;
     padding: 1rem;
     margin: 1rem;
     font-size: 1rem;
@@ -22,31 +21,67 @@ $whee-item-border-color: $whee-color-black;
 
     &__price {
         font-size: 1.5em;
+        text-align: right;
     }
 
-    &__row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__details {
+    &__first {
         display: flex;
         flex: 1;
         flex-direction: column;
         justify-content: space-between;
     }
 
+    &__second {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__details {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+    }
+
     &__image {
         margin-right: 1em;
-        @media (max-width: 600px) {
-            display: none;
-        }
     }
 
     &__button {
         text-transform: uppercase;
         min-width: 12em;
     }
+}
+
+@media (max-width: 767px) {
+  .whee-item {
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    width: auto;
+
+    &__first {
+        flex: none;
+    }
+
+    &__details {
+        flex-direction: column;
+    }
+
+    &__name {
+        margin-bottom: 0.3rem;
+    }
+
+    &__description {
+        margin-bottom: 0.3rem;
+    }
+
+    &__price {
+        margin-bottom: 0.3rem;
+    }
+
+    &__image {
+        display: none;
+    }
+  }
 }

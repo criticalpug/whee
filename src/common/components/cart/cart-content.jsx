@@ -13,7 +13,7 @@ const buttonStyle = {
   width: '100%',
 };
 
-class CartContents extends React.Component {
+class CartContents extends React.PureComponent {
   removeFromCart = (item) => {
     this.props.removeItem(item);
   }

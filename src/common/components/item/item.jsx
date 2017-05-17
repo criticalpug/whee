@@ -8,7 +8,7 @@ import './item.scss';
 
 const buttonText = 'Add to cart';
 
-class Item extends React.Component {
+class Item extends React.PureComponent {
   onClick = () => {
     if (this.props.onClick && typeof this.props.onClick === 'function') {
       this.props.onClick(this.props.item);
@@ -24,17 +24,18 @@ class Item extends React.Component {
           <Shape shape={item.get('type')} />
         </div>
         <div className="whee-item__details">
-          <div className="whee-item__row">
+          <div className="whee-item__first">
             <div className="whee-item__name whee-font-weight-bold whee-font-style-italic">
               { item.get('name') }
             </div>
-            <div className="whee-item__price">
-              { item.get('price') } { item.get('currency') }
-            </div>
-          </div>
-          <div className="whee-item__row">
             <div className="whee-item__description">
               { item.get('description') }
+            </div>
+
+          </div>
+          <div className="whee-item__second">
+            <div className="whee-item__price">
+              { item.get('price') } { item.get('currency') }
             </div>
             <Button
               classNames="whee-item__button"
